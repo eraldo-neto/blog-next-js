@@ -32,7 +32,7 @@ const Header = ({ menuList, socialNetworks, searchIcon }) => {
             <BackgroundHeader className={[Style.backgroundHeader, anchorHeaderInView ? '' : 'translate', menuOpen ? 'translate' : '', searchOpen ? 'translate' : ''].join(' ')}/>
             <HeaderContainer>
                 <Image 
-                    src="/images/logo-raccoon.png"
+                    src="/images/logo.png"
                     alt="Ingram"
                     title="Ingram"
                     height={40}
