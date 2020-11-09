@@ -1,0 +1,128 @@
+.header {
+    z-index: 30;
+    position: relative;
+}
+
+.anchorHeader {
+    position: absolute;
+    top: 0;
+}
+
+.burguerIconWrapper {
+    height: 48px;
+    width: 29px;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+}
+
+.menuList,
+.socialNetworks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuContainer {
+    height: 100%;
+}
+
+.menuWrapper {
+    max-height: calc(100% - 140px);
+    height: 100%;
+    overflow: auto;
+}
+
+.menuWrapper::-webkit-scrollbar {
+    width: 2px;
+    height: 6px;
+}
+
+.menuWrapper::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.menuList li {
+    box-sizing: border-box;
+    padding: 5px 0;
+    font-size: 1.25rem;
+    color: #fff;
+    font-weight: 500;
+    transition: 150ms linear;
+    position: relative;
+}
+
+.menuBottom {
+    position: absolute;
+    bottom: 25px;
+}
+
+.socialNetworks {
+    display: flex;
+}
+
+.socialNetworks li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.input {
+    margin-bottom: 25px;
+}
+
+.menuRight button {
+    display: none;
+}
+
+.menuRight {
+    display: flex;
+    align-items: center;
+}
+
+.menuRight i {
+    display: none;
+    cursor: pointer;
+}
+
+.hidden,
+.menuRight .hidden {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .menuRight button {
+        display: inline-block;
+        margin: 0 33px 0 0;
+    }
+
+    .menuWrapper {
+        max-height: calc(100% - 100px);
+    }
+
+    .menuBottom button{
+        display: none;
+    }
+
+    .menuContainer input {
+        display: none;
+    }
+
+    .menuRight i {
+        margin: 3px 33px 0 0;
+        display: inline-block;
+        width: 29px;
+        text-align: center;
+    }
+
+    .input {
+        max-width: 816px;
+        margin: 0 auto;
+    }
+}
+
+@media(min-width: 1366px) {
+    .menuContainer {
+        margin: 0 99px 40px 0;
+    }
+}

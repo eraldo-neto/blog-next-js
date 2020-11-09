@@ -2,8 +2,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +11,172 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.padding-container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.fixed-container {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fixed-padding-container {
+  max-width: 360px;
+  padding-left: calc((100% - 360px) / 2);
+  padding-right: calc((100% - 360px) / 2);
+}
+
+.negative-container {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+@media(min-width: 768px) {
+  .container {
+      margin-left: 48px;
+      margin-right: 48px;
+  }
+
+  .padding-container {
+      padding-left: 48px;
+      padding-right: 48px;
+  }
+
+  .fixed-container {
+      max-width: 100%;
+  }
+
+  .fixed-padding-container {
+      max-width: 100%;
+      padding-left: 48px;
+      padding-right: 48px;
+  }
+
+  .negative-container {
+      margin-left: -48px;
+      margin-right: -48px;
+  }
+}
+
+@media(min-width: 1366px) {
+  .container {
+      margin-left: 96px;
+      margin-right: 96px;
+  }
+
+  .padding-container {
+      padding-left: 96px;
+      padding-right: 96px;
+  }
+
+  .negative-container {
+      margin-left: -96px;
+      margin-right: -96px;
+  }
+}
+
+@media(min-width: 1440px) {
+  .container {
+      margin-left: calc((100% - 1174px) / 2);
+      margin-right: calc((100% - 1174px) / 2);
+  }
+
+  .padding-container {
+      padding-left: calc((100% - 1174px) / 2);
+      padding-right: calc((100% - 1174px) / 2);
+  }
+
+  .negative-container {
+      margin-left: calc( -1 * ((100% - 1174px) / 2));
+      margin-right: calc( -1 * ((100% - 1174px) / 2));
+  }
+}
+
+
+/* Utils
+ ========================================================================== */
+
+.desktop {
+  display: none;
+}
+
+/* Typography
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Gotham';
+  src:url('/fonts/Gotham-Book.woff2') format('woff2'),
+  url('/fonts/Gotham-Book.woff') format('woff'),
+  url('/fonts/Gotham-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:url('/fonts/Gotham-Medium.woff2') format('woff2'),
+  url('/fonts/Gotham-Medium.woff') format('woff'),
+  url('/fonts/Gotham-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:url('/fonts/Gotham-Bold.woff2') format('woff2'),
+  url('/fonts/Gotham-Bold.woff') format('woff'),
+  url('/fonts/Gotham-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src:url('/fonts/HelveticaLTStd-Roman.woff2') format('woff2'),
+  url('/fonts/HelveticaLTStd-Roman.woff') format('woff'),
+  url('/fonts/HelveticaLTStd-Roman.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src:url('/fonts/HelveticaNeueLTStd-Th.woff2') format('woff2'),
+  url('/fonts/HelveticaNeueLTStd-Th.woff') format('woff'),
+  url('/fonts/HelveticaNeueLTStd-Th.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 500;
+}
+
+
+html {
+  font-size: 12px;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  html {
+      font-size: 14px;
+  }
+}
+
+@media (min-width: 1366px) {
+  html {
+      font-size: 16px;
+  }
+}
+
+main {
+  min-height: 110vh;
 }
