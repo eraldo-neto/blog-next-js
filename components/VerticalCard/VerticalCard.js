@@ -2,7 +2,7 @@ import { CategoryCard, TitleCard, CardMetas, CardMeta, CardContent } from "../..
 import { Card, CardImage } from "./styles";
 import Image from 'next/image';
 
-const HorizontalCard = ({}) => {    
+const VerticalCard = ({}) => {    
 
     return (
         <Card className="postCard">
@@ -21,7 +21,7 @@ const HorizontalCard = ({}) => {
             <CardContent className="cardContent">
                 <CategoryCard href="{category.link}">Tecnologia e Sustentabilidade</CategoryCard>
                 <a href="#">
-                    <TitleCard>Gerenciamento de serviços de TI: organize suas demandas</TitleCard>
+                    <TitleCard className="titleCard">Gerenciamento de serviços de TI: organize suas demandas</TitleCard>
                 </a>
                 <CardMetas className="metasWrapper">
                     <CardMeta>
@@ -38,4 +38,4 @@ const HorizontalCard = ({}) => {
     )
 }
 
-export default HorizontalCard
+export default VerticalCard
