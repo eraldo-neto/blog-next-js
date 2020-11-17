@@ -20,3 +20,22 @@ export const Card = styled.div`
         padding-bottom: 20px;
     }
 `;
+
+export const CardImage = styled.div`
+    height: 180px;
+    overflow: hidden;
+
+    & img {
+        object-fit: cover;
+    }
+
+    @media(min-width: 768px) {
+        height: 98px;
+    }
+
+    @media(min-width: 1366px) {
+        width: 259px;
+        height: 173px;
+        margin-right: 30px;
+    }
+`;
