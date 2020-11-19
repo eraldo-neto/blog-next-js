@@ -119,7 +119,7 @@ export const CategoryCard = styled.a`
     min-width: 48px;
 `
 
-export const TitleCard = styled.a`
+export const TitleCard = styled.h3`
     margin-top: 10px;
     display: block;
     display: -webkit-box;

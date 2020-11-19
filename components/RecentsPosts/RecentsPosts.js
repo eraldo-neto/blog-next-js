@@ -3,15 +3,15 @@ import { SectionTitle, Separator } from "../../styles/common";
 import { Section, Banner, BannerImg, TitlePostsWrapper } from "./style";
 import Image from 'next/image';
 
-const RecentsPosts = ({ cards }) => {    
+const RecentsPosts = ({ cards, title }) => {    
 
     return (
         <Section className="container">
             <TitlePostsWrapper>
-                <SectionTitle>Postagens recentes</SectionTitle>
+                <SectionTitle>{title}</SectionTitle>
                 <Separator></Separator>
                 {cards.map((card, index) =>
-                    <HorizontalCard key={index}></HorizontalCard>
+                    <HorizontalCard key={index} card={card.node}></HorizontalCard>
                 )}
             </TitlePostsWrapper>
             <Banner>
