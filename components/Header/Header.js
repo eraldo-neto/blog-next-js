@@ -33,10 +33,10 @@ const Header = ({ menuList, socialNetworks, searchIcon }) => {
             <HeaderContainer>
                 <Image 
                     src="/images/logo.png"
-                    alt="Ingram"
-                    title="Ingram"
+                    alt="teste"
+                    title="teste"
                     height={40}
-                    width={107}
+                    width={167}
                 />
                 <div className={Style.menuRight}> 
                     <Button>
