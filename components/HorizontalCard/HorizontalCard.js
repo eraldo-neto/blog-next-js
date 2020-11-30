@@ -2,12 +2,15 @@ import { CategoryCard, TitleCard, CardMetas, CardMeta, CardContent } from "../..
 import { Card, CardImage } from "./styles";
 import Image from 'next/image';
 
-const HorizontalCard = ({ card }) => {    
+const HorizontalCard = ({ card, index, setcardActive }) => {    
+    function cardActiveFunction() {
+        setcardActive(index);
+    }
     return (
-        <Card className="postCard">
+        <Card className="postCard" onMouseEnter={cardActiveFunction}>
             <a href={card.link}>
-                <CardImage>
-                    <Image 
+                <CardImage className="cardImage">
+                    <Image
                         src={card.featuredImage.node.mediaItemUrl}
                         alt="{alt}"
                         width="300"

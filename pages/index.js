@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Layout from '../components/Layout/Layout';
 import RecentsPosts from '../components/RecentsPosts';
 import SeeToo from '../components/SeeToo/SeeToo';
+import CategorySection from '../components/CategorySection';
 
 export default function Home({homeData: { pages }, recentsPosts}) {
   return (
@@ -15,6 +16,7 @@ export default function Home({homeData: { pages }, recentsPosts}) {
             { link: "#", text: 'Menu item 1' },
             { link: "#", text: 'Menu item 2' },
             { link: "#", text: 'Menu item 3' }]}/>
+            <CategorySection title={pages.nodes[0].settingsHome.homeRecentTitle} cards={recentsPosts.edges} />
         </main>
     </Layout>
   )
